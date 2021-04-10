@@ -23,7 +23,7 @@ Motion correction<br/>
   <img src="test_results/test_result_corr_1iter.png" width="320" height="240"/>
 </p>
 
-**After 2 iteration**<br/>
+**After 2 iterations**<br/>
 Estimated motion field<br/>
 <p align="center">
   <img src="test_results/test_result_motion_field_2iter.png" width="320" height="240"/>
@@ -34,7 +34,7 @@ Motion correction<br/>
   <img src="test_results/test_result_corr_2iter.png" width="320" height="240"/>
 </p>
 
-**After 10 iteration**<br/>
+**After 10 iterations**<br/>
 Estimated motion field<br/>
 <p align="center">
   <img src="test_results/test_result_motion_field_10iter.png" width="320" height="240"/>
