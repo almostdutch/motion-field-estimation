@@ -94,6 +94,8 @@ def MotionFieldEstimation(image0, image1, neighborhood_size = 7, sigma = 3, reg_
     
     for i in range(Niter):
         
+        # the residual motion field (after the 1st iteration) is very small 
+        # (sub-pixel translation) so no need for a large local neighborhood
         if i >= 1:
             neighborhood_size = 5;
             sigma = 3;
