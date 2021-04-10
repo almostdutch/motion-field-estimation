@@ -43,13 +43,16 @@ image_rotated = ImageRotate(image_shifted.copy(), rot_angle_rand);
 image_ref += np.random.normal(mu, sigma, size = (Nrows, Ncols));
 image_rotated += np.random.normal(mu, sigma, size = (Nrows, Ncols));
 
+# normalization
 image0 = image_ref / 255;
 image1 = image_rotated / 255;
 
-neighborhood_size = 21;
-sigma = 5;
-reg_coef = 10e-3;
-Niter = 1;
+neighborhood_size = 21; # local neighborhood [size x size]
+sigma = 5; # Gaussian kernel size [size x size]
+reg_coef = 10e-5; # regularization for normal equation
+Niter = 10; # number of iterative refinements
+
+# estimated motion field
 delta_y, delta_x = MotionFieldEstimation(image0, image1, neighborhood_size, sigma, reg_coef, Niter);
 
 # show original data
